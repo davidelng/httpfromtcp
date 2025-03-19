@@ -46,7 +46,9 @@ func RequestFromReader(reader io.Reader) (*Request, error) {
 		numBytesRead, err := reader.Read(buf[readToIndex:])
 		if err != nil {
 			if errors.Is(io.EOF, err) {
-				req.state = requestStateDone
+				if req.state != requestStateDone {
+					return nil, fmt.Errorf("incomplete request")
+				}
 				break
 			}
 			return nil, err
@@ -129,7 +131,7 @@ func (r *Request) parse(data []byte) (int, error) {
 		r.state = requestStateDone
 		return n, nil
 	case requestStateDone:
-		return 0, fmt.Errorf("error: trying to read data in a done state")
+		return 0, fmt.Errorf("trying to read data in a done state")
 	default:
 		return 0, fmt.Errorf("unknown state")
 	}
