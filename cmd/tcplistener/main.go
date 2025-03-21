@@ -5,7 +5,7 @@ import (
 	"log"
 	"net"
 
-	"httpfromtcp/internal/request"
+	"github.com/davidelng/httpfromtcp/internal/request"
 )
 
 const port = ":42069"

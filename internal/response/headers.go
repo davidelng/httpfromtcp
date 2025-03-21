@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"io"
 
-	"httpfromtcp/internal/headers"
+	"github.com/davidelng/httpfromtcp/internal/headers"
 )
 
 func GetDefaultHeaders(contentLen int) headers.Headers {

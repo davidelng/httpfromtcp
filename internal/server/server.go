@@ -8,8 +8,8 @@ import (
 	"net"
 	"sync/atomic"
 
-	"httpfromtcp/internal/request"
-	"httpfromtcp/internal/response"
+	"github.com/davidelng/httpfromtcp/internal/request"
+	"github.com/davidelng/httpfromtcp/internal/response"
 )
 
 type Handler func(w io.Writer, req *request.Request) *HandlerError

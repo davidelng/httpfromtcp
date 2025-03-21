@@ -7,9 +7,9 @@ import (
 	"os/signal"
 	"syscall"
 
-	"httpfromtcp/internal/request"
-	"httpfromtcp/internal/response"
-	"httpfromtcp/internal/server"
+	"github.com/davidelng/httpfromtcp/internal/request"
+	"github.com/davidelng/httpfromtcp/internal/response"
+	"github.com/davidelng/httpfromtcp/internal/server"
 )
 
 const port = 42069

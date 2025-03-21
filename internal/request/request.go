@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"strings"
 
-	"httpfromtcp/internal/headers"
+	"github.com/davidelng/httpfromtcp/internal/headers"
 )
 
 type Request struct {
